@@ -1,0 +1,11 @@
+target/
+.idea/
+.vscode/
+.DS_Store
+*.iml
+*.db
+*.log
+*.class
+/build/
+/dist/
+/bin/
