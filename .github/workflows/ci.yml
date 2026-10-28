@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Test and package executable JAR
+        run: mvn --batch-mode --no-transfer-progress verify
+      - name: Exercise packaged SQLite CLI
+        env:
+          TODO_DATA: ${{ runner.temp }}/todo-smoke
+        run: |
+          java -jar target/todo-cli-1.0.0.jar help
+          java -jar target/todo-cli-1.0.0.jar add 'Packaged CLI smoke test'
+          java -jar target/todo-cli-1.0.0.jar list | grep 'Packaged CLI smoke test'

@@ -1,5 +1,7 @@
 # ToDo CLI
 
+[![CI](https://github.com/Raphailinc/ToDo-CLI/actions/workflows/ci.yml/badge.svg)](https://github.com/Raphailinc/ToDo-CLI/actions/workflows/ci.yml)
+
 Минималистичный менеджер задач на Java 17 с хранением в SQLite. Без UI, зато быстрый CLI, конфиг через переменные окружения и автотесты.
 
 ## Что сделано

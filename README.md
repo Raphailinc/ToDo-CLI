@@ -1,5 +1,7 @@
 # ToDo CLI
 
+[![CI](https://github.com/Raphailinc/ToDo-CLI/actions/workflows/ci.yml/badge.svg)](https://github.com/Raphailinc/ToDo-CLI/actions/workflows/ci.yml)
+
 [English](README.md) · [Русский](README.ru.md)
 
 A command-line learning project for persistent task management in Java.
